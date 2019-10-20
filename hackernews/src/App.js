@@ -3,7 +3,7 @@ import './App.css';
 
 const list = [
   {
-    title: 'aa',
+    title: 'Sasiya',
     url: 'https://facebook.github.io/react/',
     author: 'AAAAAA',
     num_comments: 3,
