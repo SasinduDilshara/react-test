@@ -10,30 +10,23 @@ class Test extends Component {
     constructor() {
         super()
         this.state = {
-            islog: false
+            isLoading: true
         }
-        this.change = this.change.bind(this)
-    }
-    change() {
-        this.setState((prev) => {
-            return { islog: !prev.islog }
-        }
-        )
-
     }
 
-    // componentDidMount() {
-    //     setTimeout(() => {
-
-    //     }, 1500)
-    // }
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            })
+        }, 1500)
+    }
 
     render() {
 
         return (
             <div>
-                <button onClick={this.change}>{this.state.islog ? "Logout" : "Login"}</button>
-                <p>{this.state.islog ? "Logout" : "Login"}</p>
+                {this.state.isLoading ? <h1>Loading..</h1> : <h1>OK..</h1>}
             </div>
         );
     }
@@ -42,3 +35,10 @@ class Test extends Component {
 
 export default Test;
 
+function Conditional(props) {
+    return (
+        <div>
+            {props.isLoading ? <h1>Loading..</h1> : <h1>OK..</h1>}
+        </div>
+    )
+}

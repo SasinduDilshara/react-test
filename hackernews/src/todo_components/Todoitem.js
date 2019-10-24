@@ -3,20 +3,26 @@ import React, { Component } from 'react'
 class TodoItem extends Component {
 
 
-    render() {
 
+    render() {
+        const completeStyle =
+        {
+            fontStyle: "italic",
+            color: "#cdcdcd",
+            textDecoration: "line-through"
+        }
         const { id, text, completed } = this.props
-        // console.log(this.props.id)
+
         return (
 
-            // alert(this.props.handle.toString)
+
             < div className="todo-item" >
                 <input type="checkbox"
                     checked={completed}
                     onChange={() => this.props.handle(id)}
                 />
-                <p> {text}</p>
-                {/* <button onMouseOver={click}> Click</button> */}
+                <p style={completed ? completeStyle : null}> {text}</p>
+
             </div >
         );
     }
