@@ -18,15 +18,15 @@ class App extends Component {
   render() {
 
     return (
-      <div>
-        <TodoFinal>
-
-        </TodoFinal>
-      </div>
-
       // <div>
-      //   <Test />
+      //   <TodoFinal>
+
+      //   </TodoFinal>
       // </div>
+
+      <div>
+        <Test />
+      </div>
 
 
 
