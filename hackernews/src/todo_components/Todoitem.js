@@ -4,18 +4,20 @@ class TodoItem extends Component {
 
 
     render() {
-        const click = () => console.log("Button was clicked")
-        const { id, text, completed } = this.props
 
+        const { id, text, completed } = this.props
+        // console.log(this.props.id)
         return (
-            <div className="todo-item" >
+
+            // alert(this.props.handle.toString)
+            < div className="todo-item" >
                 <input type="checkbox"
                     checked={completed}
-                // onChange={}
+                    onChange={() => this.props.handle(id)}
                 />
                 <p> {text}</p>
                 {/* <button onMouseOver={click}> Click</button> */}
-            </div>
+            </div >
         );
     }
 
