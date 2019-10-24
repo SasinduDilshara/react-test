@@ -3,10 +3,15 @@ import TodoItem from './Todoitem';
 import tododata from './tododata'
 class TodoFinal extends Component {
 
-
+    constructor() {
+        super()
+        this.state = {
+            todos: tododata
+        }
+    }
     render() {
         // const { id, text, completed } = this.props;
-        const jokes = tododata.map((jk) =>
+        const datatodos = this.state.todos.map((jk) =>
             <TodoItem key={jk.id}
 
                 text={jk.text}
@@ -14,7 +19,7 @@ class TodoFinal extends Component {
             />)
         return (
 
-            <div>{jokes}</div>
+            <div>{datatodos}</div>
 
         )
     }
