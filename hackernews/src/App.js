@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 // import TodoItem from "./todo_components/Todoitem.js"
-import ContactCard from "./contact_components/contactcard"
+import Joke from "./JokeComponents/Joke"
+import JokeData from "./JokeComponents/jokedata.js"
 class App extends Component {
 
   render() {
+    const jokes = JokeData.map((jk) =>
+      <Joke
+        ques={jk.ques}
+        ans={jk.ans}
+      />
+    )
     return (
-      <ContactCard>
-        name = "Sasindu"
-        phnnum = "011"
-        email = "jskjkj"
-        </ContactCard>
+      <div>
+        {jokes}
+      </div>
+
 
     );
   }
