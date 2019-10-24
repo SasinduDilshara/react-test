@@ -8,16 +8,29 @@ class App extends Component {
 
   constructor() {
     super()
+    this.change = this.change.bind(this);
+
     this.state = {
-      answer: "yes"
+      answer: "yes",
+      cc: "in"
     }
+  }
+
+  change(ans) {
+    switch (ans) {
+      case ('yes'): this.state.cc = "in"
+      case ('no'): this.state.cc = "out"
+      
+    }
+    return this.state.cc
   }
 
   render() {
 
     return (
       <div>
-        {this.state.answer}
+        {/* {this.state.answer} */}
+        <p>{this.change(this.state.answer)}</p>
       </div>
     );
   }
