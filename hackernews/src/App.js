@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-// import TodoItem from "./todo_components/Todoitem.js"
-import Joke from "./JokeComponents/Joke"
-import JokeData from "./JokeComponents/jokedata.js"
+import TodoFinal from "./todo_components/final.js";
+// import Joke from "./JokeComponents/Joke"
+// import Jokedata from "./JokeComponents/jokedata.js"
+
 class App extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      answer: "yes"
+    }
+  }
+
   render() {
-    const jokes = JokeData.map((jk) =>
-      <Joke
-        ques={jk.ques}
-        ans={jk.ans}
-      />
-    )
+
     return (
       <div>
-        {jokes}
+        {this.state.answer}
       </div>
-
-
     );
   }
 }
