@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodoFinal from "./todo_components/final.js"
+// import TodoFinal from "./todo_components/final.js"
 // import Joke from "./JokeComponents/Joke"
-// import Jokedata from "./JokeComponents/jokedata.js"
-import Test from './testingcomponents'
+import Final from "./MemeGenerator/Final.js"
+// import Test from './testingcomponents'
 class App extends Component {
 
-  constructor() {
-    super()
-    this.state = {
-      count: 0
-    }
-  }
-
-  handleClick
 
   render() {
 
     return (
+
       // <div>
-      //   <TodoFinal>
-
-      //   </TodoFinal>
+      //   <Test />
       // </div>
-
       <div>
-        <Test />
+        <Final />
       </div>
-
 
 
     );
