@@ -11,13 +11,7 @@ class App extends Component {
 
     return (
 
-      // <div>
-      //   <Test />
-      // </div>
-      <div>
-        <Final />
-      </div>
-
+      null
 
     );
   }
