@@ -8,8 +8,7 @@ class Test extends Component {
         super()
         this.state = {
             fname: "",
-            lname: "",
-            isFriend: true
+            lname: ""
         }
         this.change = this.change.bind(this)
     }
@@ -30,14 +29,6 @@ class Test extends Component {
                     <input name="lname" value={this.state.lname} type="text" placeholder="LastName" onChange={this.change}></input>
                     <h1>{this.state.lname}</h1>
                 </form>
-                <textarea value={"Default"} />
-                <input
-
-                    type="checkbox"
-                    name="isFriend"
-                    checked={this.state.isFriend}
-                    onChange={this.change}
-                >isFriend </input>
             </div>
         );
     }
